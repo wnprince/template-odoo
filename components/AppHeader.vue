@@ -227,10 +227,13 @@ export default {
       toggleLoginModal();
     };
 
-    const filteredTopCategories = computed(() =>
-      topCategories.value?.filter(
+    const filteredTopCategories = computed(() =>{
+      let arr;
+      arr = topCategories.value?.filter(
         (cat) => cat.name === 'WOMEN' || cat.name === 'MEN'
       )
+      return arr;
+    }
     );
 
     watch(
